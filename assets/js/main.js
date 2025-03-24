@@ -1,14 +1,16 @@
 
-      AFRAME.registerComponent("toggle1", {
-        init: function() {
-          this.el.addEventListener("click", (e) => {
-            let target1 = document.querySelector("#object2")
-            target1.setAttribute("visible", !target1.getAttribute("visible"))
-            let target3 = document.querySelector("#object3")
-            target3.setAttribute("visible", !target3.getAttribute("visible"))
-          })
-        }
-      })
+AFRAME.registerComponent("toggle1", {
+  init: function() {
+    this.el.addEventListener("mouseenter", (e) => {
+      let target1 = document.querySelector("#object2");
+      let target3 = document.querySelector("#object3");
+
+      // Alterna a visibilidade dos objetos
+      target1.setAttribute("visible", !target1.getAttribute("visible"));
+      target3.setAttribute("visible", !target3.getAttribute("visible"));
+    });
+  }
+});
 
       AFRAME.registerComponent("cameracontrol", {
         init: function () {
@@ -106,27 +108,6 @@
       }
   });
     
-  /*
-  document.addEventListener("DOMContentLoaded", function () {
-    let loadingGif = document.getElementById("loadingGif");
-    let tetraedro = document.getElementById("tetraedro");
-
-    if (!loadingGif || !tetraedro) {
-      console.error("Erro: Elemento não encontrado.");
-      return;
-    }
-
-    // Exibir GIF ao olhar para o tetraedro
-    tetraedro.addEventListener("mouseenter", () => {
-      loadingGif.setAttribute("visible", "true");
-    });
-
-    // Esconder GIF ao sair do tetraedro
-    tetraedro.addEventListener("mouseleave", () => {
-      loadingGif.setAttribute("visible", "false");
-    });
-  });*/
-  
 
      AFRAME.registerComponent("marker1move", {
    init: function() {
