@@ -1,13 +1,27 @@
-
 AFRAME.registerComponent("toggle1", {
   init: function() {
     this.el.addEventListener("mouseenter", (e) => {
-      let target1 = document.querySelector("#object2");
-      let target3 = document.querySelector("#object3");
+      let object2 = document.querySelector("#object2");
+      let object3 = document.querySelector("#object3");
 
-      // Alterna a visibilidade dos objetos
-      target1.setAttribute("visible", !target1.getAttribute("visible"));
-      target3.setAttribute("visible", !target3.getAttribute("visible"));
+      
+        object2.setAttribute("visible", true);
+        object3.setAttribute("visible", false);
+      
+    });
+  }
+});
+
+AFRAME.registerComponent("toggle2", {
+  init: function() {
+    this.el.addEventListener("mouseenter", (e) => {
+      let object2 = document.querySelector("#object2");
+      let object3 = document.querySelector("#object3");
+
+      
+        object2.setAttribute("visible", false);
+        object3.setAttribute("visible", true);
+      
     });
   }
 });
