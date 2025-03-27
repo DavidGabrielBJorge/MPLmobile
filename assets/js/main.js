@@ -53,7 +53,7 @@ AFRAME.registerComponent("toggle2", {
                               document.getElementById("rig").setAttribute("position", "3.6 0 -0.4");
                               break;
                         case "marker6":
-                              document.getElementById("rig").setAttribute("position", "5.6 0 -5.5");
+                              document.getElementById("rig").setAttribute("position", "6.1 0.07 -6.6");
                     }
                 }, 2000); // 3000 milissegundos = 3 segundos
             });
