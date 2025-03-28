@@ -54,6 +54,7 @@ AFRAME.registerComponent("toggle2", {
                               break;
                         case "marker6":
                               document.getElementById("rig").setAttribute("position", "6.1 0.07 -6.6");
+                              document.getElementById("rig").setAttribute("rotation", "0 180 0");
                     }
                 }, 2000); // 3000 milissegundos = 3 segundos
             });
