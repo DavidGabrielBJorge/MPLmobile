@@ -34,7 +34,7 @@
       <a-light type="directional" intensity="0.3" color="#FAFAFA" position="-2 2 -0.5"></a-light>
        
        <a-assets>
-        <a-asset-item id="gltf" src="./assets/entities/MLP_Ambiente.glb"></a-asset-item>
+        <a-asset-item id="gltf" src="./assets/entities/MLP_Ambiente_Mobile.glb"></a-asset-item>
         <a-asset-item id="gltf2" src="./assets/entities/MLP_Canos_Descricao_PTBR.glb"></a-asset-item>
         <a-asset-item id="gltf3" src="./assets/entities/MLP_Canos.glb"></a-asset-item>
         <a-asset-item id="navmesh" src="./assets/entities/MLP_Navegacao.glb"></a-asset-item>
@@ -44,20 +44,15 @@
 
       </a-assets>
       
-      <!--Primary environment model-->
       <a-entity id="object1" gltf-model="#gltf" scale="1 1 1" position="-0.93 0 -0.4" visible="true"></a-entity>
       
-      <!--Labeled pipes model-->
       <a-entity id="object2" gltf-model="#gltf2" scale="1 1 1" position="-0.93 0 -0.4" visible="false"></a-entity>
       
-      <!--Unlabeled pipes model-->
       <a-entity id="object3" gltf-model="#gltf3" scale="1 1 1" position="-0.93 0 -0.4" visible="true"></a-entity>
-      
-      <!--Label toggle buttons-->
-      <a-entity class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" material="shader: flat; color: green" scale="0.9 0.9 0.9" position="1.15 0.8 -1.4" rotation="0 45 20" toggle1></a-entity>
-      
-      <a-entity class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" material="shader: flat; color: yellow" scale="0.9 0.9 0.9" position="0.819 0.8 -1.729" rotation="0 45 20" toggle2></a-entity>
-     <!--Teleportation points 0.8 0.818 -1.712-->
+
+      <a-entity class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" material="shader: flat; color: yellow" scale="0.9 0.9 0.9" position="1.15 0.8 -1.4" rotation="0 45 20" toggle2></a-entity>
+      <a-entity class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" material="shader: flat; color: green" scale="0.9 0.9 0.9" position="0.819 0.8 -1.729" rotation="0 45 20" toggle1></a-entity>
+
       <a-plane id="markerhome" class="clickable"   material="shader: flat; color: red" scale="0.75 0.75 0.75" position="0.25 0.07 0"rotation="-90 0 0" cameracontrol markerhomemove></a-plane>
       <a-plane id="marker1" class="clickable"   material="shader: flat; color: red" scale="0.75 0.75 0.75" position="0.25 0.07 -3.4"rotation="-90 0 0" cameracontrol marker1move></a-plane>
       <a-plane id="marker2" class="clickable"   material="shader: flat; color: red" scale="0.75 0.75 0.75" position="-2 0.07 -3.4"  rotation="-90 0 0" cameracontrol marker2move></a-plane>
@@ -66,14 +61,11 @@
       <a-plane id="marker5" class="clickable"   material="shader: flat; color: red" scale="0.75 0.75 0.75" position="3.6 0.07 -0.4" rotation="-90 0 0" cameracontrol marker5move></a-plane>
       <a-plane id="marker6" class="clickable"   material="shader: flat; color: red" scale="1.25 1.25 1.25" position="6.1 0.07 -6.6" rotation="-90 0 0" cameracontrol marker6move></a-plane>
       
-      <!--Monitor images-->
       <a-image src="#screen1" position="-1.12 1.445 -1.65" scale="1.412 0.76" rotation="0 45 0"></a-image>
       <a-image src="#screen2" position="1.1 1.445 -1.65" scale="1.412 0.76" rotation="0 -45 0"></a-image>
     
-      <!-- Navigation mesh -->
       <a-entity gltf-model="#navmesh" scale="1 1 1" position="-0.93 0 -0.4" visible="false" nav-mesh></a-entity>
-      
-      <!--Player rig-->
+
       <a-entity id="rig" movement-controls="speed: 0.06; constrainToNavMesh: true">
         <a-entity camera position="0 1.6 0" look-controls>
           <a-entity id="cursor" cursor="fuse: false" position="0 0 -1">
